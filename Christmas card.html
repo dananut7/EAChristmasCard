@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Card</title>
+    <style>
+        /* Body styling with Christmas green gradient background */
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #2e7d32, #66bb6a);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Card styling */
+        .card {
+            background: #fff8e1; /* Soft warm tone */
+            border: 3px solid #b71c1c; /* Dark red border */
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            margin: 100px auto;
+            padding: 30px;
+            position: relative;
+        }
+
+        /* Header with festive red color */
+        h1 {
+            color: #b71c1c;
+            font-family: 'Cursive', sans-serif;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        /* Paragraph styles */
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+
+        /* Question styling with hover effect */
+        .question {
+            color: #1e88e5;
+            font-size: 20px;
+            cursor: pointer;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .question:hover {
+            color: #b71c1c;
+        }
+
+        /* Answer styling */
+        .answer {
+            display: none;
+            margin-top: 20px;
+            color: #2e7d32;
+            font-size: 18px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Christmas Greeting Card -->
+    <div class="card">
+        <h1>Merry Christmas!</h1>
+        <p>Dear Thomas and ICT Team,</p>
+        <p>May your Christmas be filled with laughter, some well-deserved downtime, and maybe even a few tech jokes!</p>
+
+        <!-- Interactive Joke 1 -->
+        <p class="question" onclick="toggleAnswer('answer1')">Why was the AI so bad at dating?</p>
+        <p class="answer" id="answer1">It could not handle mixed signals.</p>
+
+        <!-- Interactive Joke 2 -->
+        <p class="question" onclick="toggleAnswer('answer2')">Why did the robot go on a diet?</p>
+        <p class="answer" id="answer2">Too many bytes were slowing it down.</p>
+    </div>
+
+    <!-- JavaScript to Toggle Answers -->
+    <script>
+        function toggleAnswer(answerId) {
+            var answer = document.getElementById(answerId);
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
